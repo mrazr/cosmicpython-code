@@ -5,7 +5,7 @@ import queue
 
 OrderReference = NewType('OrderReference', str)
 
-@dataclass(frozen=True)
+@dataclass(unsafe_hash=True)
 class OrderLine:
     order_reference: OrderReference
     sku: str
